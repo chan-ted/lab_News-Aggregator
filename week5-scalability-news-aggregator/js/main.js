@@ -1,32 +1,41 @@
 import { fetchNews } from "./apiService.js";
 import { createNewsCard } from "./newsCard.js";
 import { showSkeletons, removeSkeletons } from "./skeleton.js";
-import { showErrorMessage } from "./errorHandler.js";
+import { filterBySource } from "./filter.js";
+import { sortByDate } from "./sort.js";
 
 const container = document.getElementById("newsContainer");
+let articles = [];
 
 async function loadNews() {
     container.innerHTML = "";
-    showSkeletons(container, 6); // Show placeholders
+    showSkeletons(container, 6);
 
-    try {
-        const [newsAPI, guardianAPI, nytAPI] = await fetchNews();
-        const articles = [...newsAPI.articles, ...guardianAPI.results, ...nytAPI.results];
+    const [newsAPI, guardianAPI, nytAPI] = await fetchNews();
+    articles = [...newsAPI.articles, ...guardianAPI.results, ...nytAPI.results];
 
-        removeSkeletons();
-
-        if (articles.length === 0) {
-            showErrorMessage();
-        } else {
-            articles.forEach(article => {
-                container.appendChild(createNewsCard(article));
-            });
-        }
-    } catch (error) {
-        removeSkeletons();
-        showErrorMessage();
-    }
+    removeSkeletons();
+    displayNews(articles);
 }
 
-document.getElementById("retryButton").addEventListener("click", loadNews);
+function displayNews(filteredArticles) {
+    container.innerHTML = "";
+    filteredArticles.forEach(article => {
+        container.appendChild(createNewsCard(article));
+    });
+}
+
+document.getElementById("sourceFilter").addEventListener("change", (event) => {
+    const selectedSource = event.target.value;
+    if (selectedSource === "all") {
+        displayNews(articles);
+    } else {
+        displayNews(filterBySource(articles, selectedSource));
+    }
+});
+
+document.getElementById("sortByDate").addEventListener("click", () => {
+    displayNews(sortByDate(articles));
+});
+
 loadNews();
