@@ -1,0 +1,15 @@
+[0216/235956.826:INFO:ddg\webview\webview_embedded\com\com_cef_view_environment.cc:229] Created environment, environments size: 1
+[0216/235957.961:INFO:ddg\webview\webview_embedded\com\com_cef_view_environment.cc:229] Created environment, environments size: 2
+[0217/000013.679:INFO:ddg\webview\webview_embedded\com\com_cef_view_controller.cc:273] [DPI-DBG] ComCefViewController::UpdateControllerVisibility: env=Env: 1  h=2 browser_hwnd=0x0x110600 parent_hwnd=0x0x1a066c IsIconic=0 visibility=0 pre_hidden_prior=2
+[0217/000013.680:INFO:ddg\webview\webview_embedded\com\com_cef_view_controller.cc:77] [DPI-DBG] ComCefViewController::put_WebContentVisibility: env=Env: 1  h=2 browser_hwnd=0x0x110600 parent_hwnd=0x0x1a066c visibility=2 pre_hidden_prior=2
+[0217/000015.231:INFO:ddg\webview\webview_embedded\com\com_cef_view_controller.cc:273] [DPI-DBG] ComCefViewController::UpdateControllerVisibility: env=Env: 2  h=1 browser_hwnd=0x0x90734 parent_hwnd=0x0xd0464 IsIconic=0 visibility=0 pre_hidden_prior=2
+[0217/000015.231:INFO:ddg\webview\webview_embedded\com\com_cef_view_controller.cc:77] [DPI-DBG] ComCefViewController::put_WebContentVisibility: env=Env: 2  h=1 browser_hwnd=0x0x90734 parent_hwnd=0x0xd0464 visibility=2 pre_hidden_prior=2
+[0217/000015.556:INFO:ddg\webview\webview_embedded\com\com_cef_view_controller.cc:77] [DPI-DBG] ComCefViewController::put_WebContentVisibility: env=Env: 2  h=1 browser_hwnd=0x0x90734 parent_hwnd=0x0xd0464 visibility=1 pre_hidden_prior=2
+[0217/000020.513:INFO:ddg\webview\webview_embedded\com\com_cef_view_controller.cc:273] [DPI-DBG] ComCefViewController::UpdateControllerVisibility: env=Env: 2  h=2 browser_hwnd=0x0x2403a4 parent_hwnd=0x0x507e2 IsIconic=0 visibility=0 pre_hidden_prior=2
+[0217/000020.513:INFO:ddg\webview\webview_embedded\com\com_cef_view_controller.cc:77] [DPI-DBG] ComCefViewController::put_WebContentVisibility: env=Env: 2  h=2 browser_hwnd=0x0x2403a4 parent_hwnd=0x0x507e2 visibility=2 pre_hidden_prior=2
+[0217/000030.391:INFO:ddg\webview\webview_embedded\com\com_cef_view_controller.cc:273] [DPI-DBG] ComCefViewController::UpdateControllerVisibility: env=Env: 2  h=3 browser_hwnd=0x0xb0772 parent_hwnd=0x0x1106c4 IsIconic=0 visibility=0 pre_hidden_prior=2
+[0217/000030.391:INFO:ddg\webview\webview_embedded\com\com_cef_view_controller.cc:77] [DPI-DBG] ComCefViewController::put_WebContentVisibility: env=Env: 2  h=3 browser_hwnd=0x0xb0772 parent_hwnd=0x0x1106c4 visibility=2 pre_hidden_prior=2
+[0217/000052.197:WARNING:ddg\webview\common\ipc\channel.cc:220] Channel disconnected
+[0217/000052.197:WARNING:ddg\webview\webview_embedded\browser_instance.cc:253] Env: 2 BrowserInstance: channel error: Disconnected
+[0217/000053.408:WARNING:ddg\webview\webview_embedded\environment.cc:43] Env: 2 Environment destroyed
+[0217/000053.576:WARNING:ddg\webview\webview_embedded\environment.cc:43] Env: 1 Environment destroyed
